@@ -7,6 +7,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 li {
   list-style-type: none;
 }
@@ -230,7 +234,7 @@ LANDING PAGE
   color: white;
   position: absolute;
   bottom: 32px;
-  right: 40px;
+  right: 20px;
 }
 
 .scroll {
