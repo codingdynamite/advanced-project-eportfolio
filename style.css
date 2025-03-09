@@ -225,16 +225,18 @@ LANDING PAGE
 }
 
 .mail__btn {
-  width: 50px;
-  height: 50px;
-  font-size: 25px;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
   border-radius: 50%;
   border: none;
   background-color: #242424;
   color: white;
   position: absolute;
-  bottom: 32px;
-  right: 20px;
+  bottom: 0px;
+  right: 40px;
+  z-index: 100;
+  box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.28);
 }
 
 .scroll {
@@ -287,7 +289,7 @@ nav {
   max-width: 1200px;
   margin: 0 auto;
   height: 100px;
-  padding: 0 30px;
+  padding: 0 20px;
 }
 
 #personal-logo {
@@ -568,7 +570,7 @@ PROJECTS
 }
 
 .project__description--title {
-  font-size: 38px;
+  font-size: 40px;
 }
 
 .project__description--sub-title {
@@ -619,6 +621,25 @@ footer {
 .footer__social--link,
 .footer__copyright {
   color: white;
+}
+
+.footer__logo--popper {
+    position: absolute;
+    right: 0;
+    top: 16px;
+    font-weight: 700;
+    color: white;
+    opacity: 0;
+    transition: all 300ms ease;
+}
+
+.footer__anchor {
+    position: relative;
+}
+
+.footer__anchor:hover .footer__logo--popper {
+    transform: translateX(60px);
+    opacity: 1;
 }
 
 /*
@@ -695,6 +716,7 @@ left = 80vw
     font-size: 20px;
   }
   .modal {
+    position: relative;
     top: 0;
     left: 0;
     transform: none;
@@ -702,9 +724,28 @@ left = 80vw
     width: 100%;
     flex-direction: column-reverse;
     border-radius: 0;
+    margin-bottom: 40px;
   }
   .modal__half {
     width: 100%;
+  }
+  .modal--open #projects {
+    padding-top: 40px;
+    margin-top: 40px;
+  }
+  .modal--open section {
+    position: relative;
+  }
+  .modal--open .modal {
+    z-index: 1;
+    position: relative;
+    visibility: visible;
+  }
+  .modal--open nav,
+  .modal--open .scroll,
+  .modal--open .header {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
